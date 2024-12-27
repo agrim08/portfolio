@@ -4,6 +4,7 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Loader from "../utils/Loader";
 import { FiSend } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [fromData, setFormData] = useState({
@@ -76,7 +77,12 @@ const Contact = () => {
       <h2 className="mb-8 text-4xl font-semibold text-center tracking-tighter">
         Let&apos;s Connect 😊
       </h2>
-      <form onSubmit={handleSubmit}>
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        onSubmit={handleSubmit}
+      >
         <div className="mb-4 flex space-x-4">
           <div className="lg:w-1/2">
             <input
@@ -91,7 +97,13 @@ const Contact = () => {
                 focus:outline-none rounded-lg`}
             />
             {error.name && (
-              <p className="text-sm text-rose-800">{error.name}</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-sm text-rose-800"
+              >
+                {error.name}
+              </motion.p>
             )}
           </div>
           <div className="lg:w-1/2">
@@ -107,7 +119,13 @@ const Contact = () => {
                 focus:outline-none rounded-lg`}
             />
             {error.email && (
-              <p className="text-sm text-rose-800">{error.email}</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-sm text-rose-800"
+              >
+                {error.email}
+              </motion.p>
             )}
           </div>
         </div>
@@ -124,7 +142,13 @@ const Contact = () => {
                 focus:outline-none rounded-lg h-32`}
           />
           {error.message && (
-            <p className="text-sm text-rose-800">{error.message}</p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-sm text-rose-800"
+            >
+              {error.message}
+            </motion.p>
           )}
         </div>
         <button
@@ -140,7 +164,7 @@ const Contact = () => {
             {!isSending && <FiSend />}
           </div>
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };
