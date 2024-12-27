@@ -162,7 +162,7 @@ export const EDUCATION = [
   {
     degree: "12th Standard",
     institution: "St. Paul's Senior Secondary School, Rampur, UP, India",
-    duration: "2023",
+    duration: "2022 - 2023",
     description:
       "Completed 12th grade with a focus on Science, achieving strong academic performance in subjects like Mathematics, Physics, and Computer Science. Secured a place in the top 3 at the district level with 94%. Developed an early interest in technology, which led to pursuing a career in computer science and software development.",
   },
