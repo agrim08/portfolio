@@ -17,6 +17,7 @@ const Footer = () => {
             href={link.href}
             target="blank"
             rel="noopener noreferrer"
+            className="hover:scale-[1.2] hover:transition-transform duration-500"
           >
             {link.icon}
           </motion.a>
