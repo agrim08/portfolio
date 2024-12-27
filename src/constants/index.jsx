@@ -170,7 +170,7 @@ export const EDUCATION = [
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://www.linkedin.com/agrim-gupta08",
+    href: "https://www.linkedin.com/in/agrim-gupta08/x",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
   {
