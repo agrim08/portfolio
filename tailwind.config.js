@@ -4,10 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
-        merriweather: ["Merriweather", "serif"],
-        alef: ["Alef", "sans-serif"],
       },
     },
   },

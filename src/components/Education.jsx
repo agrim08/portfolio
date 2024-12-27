@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <section className="py-8" id="education">
+    <section className="py-8 font-roboto" id="education">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const Education = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: index * 0.3 }}
-            className="mb-6 p-10"
+            className="p-10"
           >
             <h3 className="text-xl font-semibold">{edu.degree}</h3>
             <p className="text-lg">{edu.institution}</p>

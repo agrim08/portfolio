@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex min-h-screen flex-wrap items-center pt-[65px]">
+    <section className="flex min-h-screen flex-wrap items-center pt-[65px] font-roboto">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -16,7 +16,7 @@ const Hero = () => {
         <p className="p-2 text-3xl tracking-tighter lg:text-4xl pl-8">
           {HERO.greet}
         </p>
-        <p className="mb-8 p-2 text-xl pl-8">{HERO.description}</p>
+        <p className="mb-8 p-2 text-xl pl-8 text-justify">{HERO.description}</p>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}

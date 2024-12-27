@@ -72,9 +72,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="p-4 lg:w-3/4" id="contact">
+    <div className="p-6 lg:w-3/4 font-roboto shadow-lg rounded-xl" id="contact">
       <Toaster />
-      <h2 className="mb-8 text-4xl font-semibold text-center tracking-tighter">
+      <h2 className="mb-8 text-4xl font-semibold text-center tracking-tight ">
         Let&apos;s Talk
       </h2>
       <motion.form
@@ -83,8 +83,8 @@ const Contact = () => {
         transition={{ duration: 0.8, delay: 0.7 }}
         onSubmit={handleSubmit}
       >
-        <div className="mb-4 flex space-x-4">
-          <div className="lg:w-1/2">
+        <div className="mb-6 flex flex-col lg:flex-row lg:space-x-6">
+          <div className="lg:w-1/2 mb-4 lg:mb-0">
             <input
               type="text"
               id="name"
@@ -92,15 +92,13 @@ const Contact = () => {
               value={fromData.name}
               placeholder="Name"
               onChange={handleFormData}
-              className={`mb-8 w-full appearance-none border border-stone-50/30 
-                bg-transparent px-3 py-2 text-sm focus:border-stone-400
-                focus:outline-none rounded-lg`}
+              className="w-full border border-gray-300 bg-transparent px-4 py-3 rounded-lg text-sm focus:border-stone-400 focus:outline-none shadow-md transition duration-300 ease-in-out hover:shadow-lg"
             />
             {error.name && (
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="text-sm text-rose-800"
+                className="text-sm text-rose-800 mt-1"
               >
                 {error.name}
               </motion.p>
@@ -114,22 +112,20 @@ const Contact = () => {
               value={fromData.email}
               placeholder="E-mail"
               onChange={handleFormData}
-              className={`mb-8 w-full appearance-none border border-stone-50/30 
-                bg-transparent px-3 py-2 text-sm focus:border-stone-400
-                focus:outline-none rounded-lg`}
+              className="w-full border border-gray-300 bg-transparent px-4 py-3 rounded-lg text-sm focus:border-stone-400 focus:outline-none shadow-md transition duration-300 ease-in-out hover:shadow-lg"
             />
             {error.email && (
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="text-sm text-rose-800"
+                className="text-sm text-rose-800 mt-1"
               >
                 {error.email}
               </motion.p>
             )}
           </div>
         </div>
-        <div className="mb-4">
+        <div className="mb-6">
           <textarea
             type="text"
             id="message"
@@ -137,15 +133,13 @@ const Contact = () => {
             value={fromData.message}
             placeholder="Message"
             onChange={handleFormData}
-            className={`mb-8 w-full appearance-none border border-stone-50/30 
-                bg-transparent px-3 py-2 text-sm focus:border-stone-400
-                focus:outline-none rounded-lg h-32`}
+            className="w-full border border-gray-300 bg-transparent px-4 py-3 rounded-lg text-sm focus:border-stone-400 focus:outline-none shadow-md transition duration-300 ease-in-out hover:shadow-lg h-40"
           />
           {error.message && (
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-sm text-rose-800"
+              className="text-sm text-rose-800 mt-1"
             >
               {error.message}
             </motion.p>
@@ -153,10 +147,9 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-200
-            px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-300 ${
-              isSending ? "cursor-not-allowed opacity-50" : "cursor-pointer"
-            }`}
+          className={`w-full rounded-lg border border-gray-300 bg-stone-200 px-6 py-3 text-sm font-semibold text-stone-800 hover:bg-stone-400 transition duration-300 ease-in-out ${
+            isSending ? "cursor-not-allowed opacity-50" : "cursor-pointer"
+          }`}
           disabled={isSending}
         >
           <div className="flex items-center gap-2 justify-center">
