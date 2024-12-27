@@ -1,8 +1,15 @@
 import { MdArrowOutward } from "react-icons/md";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Projects = () => {
+  const [clickedProject, setClickedProject] = useState(null);
+
+  const handleToggle = (id) => {
+    setClickedProject((prev) => (prev === id ? null : id));
+  };
+
   return (
     <section className="pt-20" id="projects">
       <motion.h2
@@ -21,6 +28,7 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             key={project.id}
+            onClick={() => handleToggle(project.id)}
             className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
             <motion.img
@@ -31,18 +39,24 @@ const Projects = () => {
             />
             <motion.div
               initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
+              animate={{
+                opacity:
+                  clickedProject === project.id || window.innerWidth >= 768
+                    ? 1
+                    : 0,
+              }}
               transition={{ duration: 0.6 }}
-              className={`absolute inset-0 opacity-0 text-white flex flex-col items-center justify-center
-                backdrop-blur-lg transition-opacity duration-500 group-hover:opacity-100
-            `}
+              className={`absolute inset-0 text-white flex flex-col items-center justify-center
+                backdrop-blur-lg transition-opacity duration-500 ${
+                  clickedProject === project.id ? "opacity-100" : "opacity-0"
+                } group-hover:opacity-100`}
             >
               <h3 className="mb-3 text-xl">{project.name}</h3>
               <p className="mb-12 p-4">{project.description}</p>
               <a
                 href={project.githubLink}
                 target="_blank"
-                rel="noopener norefferer"
+                rel="noopener noreferrer"
                 className="rounded-full bg-white text-black hover:bg-gray-300 px-4 py-2"
               >
                 <div className="flex items-center">
