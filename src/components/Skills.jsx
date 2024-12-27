@@ -32,7 +32,7 @@ const Skills = () => {
               {skill.icon}
               <h3 className="px-6 tex-lg lg:text-2xl">{skill.name}</h3>
             </div>
-            <div className="text-md font-semibold lg:text-lg">
+            <div className="text-md font-semibold lg:text-lg text-stone-200">
               <span>{skill.experience}</span>
             </div>
           </motion.div>

@@ -31,8 +31,8 @@ const Hero = () => {
             transition={{ duration: 1 }}
             src="https://binaryblogger.com/wp-content/uploads/2022/11/cyber-security-tips-for-developer.jpg"
             alt="hero_img"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             className="rounded-xl"
           />
         </div>

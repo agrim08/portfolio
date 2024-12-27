@@ -1,4 +1,4 @@
-import { FaXTwitter, FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 
 import projectImage1 from "../assets/project1.jpeg";
@@ -7,8 +7,6 @@ import projectImage3 from "../assets/project3.jpeg";
 import projectImage4 from "../assets/project4.jpeg";
 import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
-
-import Project1 from "../assets/image.png";
 
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -24,14 +22,14 @@ export const NAVIGATION_LINKS = [
   { label: "Skills", href: "#skills" },
   { label: "Work Experience", href: "#work" },
   { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Let's Talk", href: "#contact" },
 ];
 
 export const HERO = {
   name: "AGRIM GUPTA",
   greet: "Hello there! 👋🏻",
   description:
-    "I am a dedicated full-stack developer with a passion for crafting intuitive and visually appealing user interfaces. I thrive on turning ideas into seamless and impactful web applications.",
+    "I am a dedicated full-stack developer who enjoys developing intuitive and visually attractive user interfaces. I take great satisfaction in turning ideas into seamless and impactful web applications.",
 };
 
 export const PROJECTS = [
@@ -47,7 +45,7 @@ export const PROJECTS = [
     id: 2,
     name: "Flask App",
     description:
-      "A friend list management application built with React and Flask for managing CRUD opearations.",
+      "A full-stack friend list management application built with React for the frontend and Flask for the backend. Enables users to perform CRUD operations on their friend lists.",
     image: projectImage3,
     githubLink: "https://github.com/agrim08/Cool-Dudes",
   },
@@ -64,7 +62,7 @@ export const PROJECTS = [
     id: 4,
     name: "Netflix GPT",
     description:
-      "A GPT-powered recommendation system developed using Google Gemini APIs and Firebase, offering personalized movie and show suggestions with an intuitive and interactive user interface.",
+      "A GPT-powered recommendation system developed using Gemini APIs and Firebase, offering personalized movie suggestions with an intuitive and interactive user interface.",
     image: projectImage4,
     githubLink: "https://github.com/agrim08/netflix-gpt",
   },
@@ -87,9 +85,9 @@ export const PROJECTS = [
 ];
 
 export const BIO = [
-  "Agrim Gupta is a dedicated full-stack developer currently pursuing a Bachelor of Technology in Computer Science at JSS Academy of Technical Education, Noida, India. As a second-year student, he has already begun making strides in web development, showcasing his passion for crafting functional and engaging digital experiences.",
+  "Agrim Gupta is a dedicated full-stack developer currently pursuing his Bachelor of Technology in Computer Science from JSS Academy of Technical Education, Noida, India. As a second-year student, he has already started making his way through web development, which has demonstrated his passion for crafting functional and engaging digital experiences.",
   "In 2024, Agrim developed a real-time chat application using the MERN stack, featuring instant messaging, user authentication, and a responsive design. This project demonstrates his commitment to building user-friendly and reliable solutions, highlighting his expertise in modern web technologies and his ability to solve real-world challenges.",
-  "As a multi-faceted developer, Agrim has also worked on projects like Netflix GPT, a GPT-powered recommendation platform, and DevTinder, a collaborative network for developers. With proficiency in React, Node.js, and Tailwind, coupled with a growing interest in generative AI, Agrim Gupta continues to refine his skills and contribute to innovative solutions in the tech space.",
+  "As a multi-faceted developer, Agrim has also worked on projects such as Netflix GPT, a GPT-powered recommendation platform, and DevTinder, a collaborative network for developers. With proficiency in React, Node.js, and Tailwind, coupled with a growing interest in generative AI, Agrim Gupta continues to refine his skills and contribute to innovative solutions in the tech space.",
 ];
 
 export const SKILLS = [

@@ -44,7 +44,7 @@ const Navbar = () => {
               </a>
             </div> */}
             <div>
-              <ul className="flex items-center gap-4">
+              <ul className="flex items-center gap-12 ">
                 {NAVIGATION_LINKS.map((item, index) => (
                   <li key={index}>
                     <a
@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
 
         {/* mobile view */}
-        <div className="rounded-lg backdrop-blur-md lg:hidden">
+        <div className="rounded-lg lg:hidden">
           <div className="flex items-center justify-between">
             {/* <div>
               <a href="#">

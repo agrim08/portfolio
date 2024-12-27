@@ -10,7 +10,7 @@ import Work from "./components/Work";
 
 function App() {
   return (
-    <div className="relative h-full overflow-y-auto antialiased font-roboto">
+    <div className="relative h-full overflow-y-auto antialiased font-alef">
       <div className="inset-0 bg-fixed bg-cover bg-center bg-img">
         <div className="relative z-10 flex flex-col items-center mx-auto p-4 space-x-8 container">
           <Hero />

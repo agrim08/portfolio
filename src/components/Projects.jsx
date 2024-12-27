@@ -1,15 +1,7 @@
 import { MdArrowOutward } from "react-icons/md";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
-import { useState } from "react";
-
 const Projects = () => {
-  const [clickedProject, setClickedProject] = useState(null);
-
-  const handleToggle = (id) => {
-    setClickedProject((prev) => (prev === id ? null : id));
-  };
-
   return (
     <section className="pt-20" id="projects">
       <motion.h2
@@ -28,7 +20,6 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             key={project.id}
-            onClick={() => handleToggle(project.id)}
             className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
             <motion.img
@@ -37,22 +28,20 @@ const Projects = () => {
               alt={project.name}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
+
+            {/* Content overlay with blurred background */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{
-                opacity:
-                  clickedProject === project.id || window.innerWidth >= 768
-                    ? 1
-                    : 0,
+                opacity: 1,
               }}
               transition={{ duration: 0.6 }}
-              className={`absolute inset-0 text-white flex flex-col items-center justify-center
-                backdrop-blur-lg transition-opacity duration-500 ${
-                  clickedProject === project.id ? "opacity-100" : "opacity-0"
-                } group-hover:opacity-100`}
+              className={`absolute inset-0 flex flex-col items-center justify-center
+              text-white group-hover:opacity-100 backdrop-blur-lg p-4
+             `}
             >
-              <h3 className="mb-3 text-xl">{project.name}</h3>
-              <p className="mb-12 p-4">{project.description}</p>
+              <h3 className="mb-3 text-xl text-center">{project.name}</h3>
+              <p className="mb-12 text-center">{project.description}</p>
               <a
                 href={project.githubLink}
                 target="_blank"

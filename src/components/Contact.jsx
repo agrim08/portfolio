@@ -75,7 +75,7 @@ const Contact = () => {
     <div className="p-4 lg:w-3/4" id="contact">
       <Toaster />
       <h2 className="mb-8 text-4xl font-semibold text-center tracking-tighter">
-        Let&apos;s Connect 😊
+        Let&apos;s Talk
       </h2>
       <motion.form
         initial={{ opacity: 0 }}
@@ -90,7 +90,7 @@ const Contact = () => {
               id="name"
               name="name"
               value={fromData.name}
-              placeholder="name"
+              placeholder="Name"
               onChange={handleFormData}
               className={`mb-8 w-full appearance-none border border-stone-50/30 
                 bg-transparent px-3 py-2 text-sm focus:border-stone-400
@@ -112,7 +112,7 @@ const Contact = () => {
               id="email"
               name="email"
               value={fromData.email}
-              placeholder="email"
+              placeholder="E-mail"
               onChange={handleFormData}
               className={`mb-8 w-full appearance-none border border-stone-50/30 
                 bg-transparent px-3 py-2 text-sm focus:border-stone-400
@@ -135,7 +135,7 @@ const Contact = () => {
             id="message"
             name="message"
             value={fromData.message}
-            placeholder="message"
+            placeholder="Message"
             onChange={handleFormData}
             className={`mb-8 w-full appearance-none border border-stone-50/30 
                 bg-transparent px-3 py-2 text-sm focus:border-stone-400
