@@ -19,6 +19,7 @@ const Projects = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
             key={project.id}
             className="relative overflow-hidden rounded-xl shadow-md border border-gray-200 cursor-pointer"
           >
