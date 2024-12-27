@@ -39,7 +39,7 @@ const Navbar = () => {
                 <img
                   src={Logo}
                   alt="logo"
-                  width={80}
+                  width={50}
                   className="rounded-full"
                 />
               </a>

@@ -35,14 +35,6 @@ export const HERO = {
 export const PROJECTS = [
   {
     id: 1,
-    name: "Personal Portfolio",
-    description:
-      "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
-    image: projectImage1,
-    githubLink: "https://github.com/agrim08/portfolio",
-  },
-  {
-    id: 2,
     name: "Chat-Aplication",
     description:
       "A real-time chat application built using MERN Stack, featuring instant messaging, user authentication, and seamless communication with a sleek and responsive interface.",
@@ -50,12 +42,21 @@ export const PROJECTS = [
     githubLink: "https://github.com/agrim08/MERNChatApp",
   },
   {
-    id: 3,
+    id: 2,
     name: "Flask App",
     description:
       "A friend list management application built with React and Flask for managing CRUD opearations.",
     image: projectImage3,
     githubLink: "https://github.com/agrim08/Cool-Dudes",
+  },
+
+  {
+    id: 3,
+    name: "Dev Mate",
+    description:
+      "A collaborative platform built with the MERN stack, enabling developers to connect, network, and collaborate on projects through an intuitive and engaging interface.",
+    image: projectImage5,
+    githubLink: "https://github.com/agrim08/DevMate",
   },
   {
     id: 4,
@@ -67,19 +68,19 @@ export const PROJECTS = [
   },
   {
     id: 5,
-    name: "Dev Mate",
-    description:
-      "A collaborative platform built with the MERN stack, enabling developers to connect, network, and collaborate on projects through an intuitive and engaging interface.",
-    image: projectImage5,
-    githubLink: "https://github.com/agrim08/DevMate",
-  },
-  {
-    id: 6,
     name: "YouTube clone",
     description:
       "A dynamic YouTube clone built with React and Tailwind, featuring video streaming, search functionality, and seamless user experience powered by the YouTube API.",
     image: projectImage6,
     githubLink: "https://github.com/agrim08/youtube-clone",
+  },
+  {
+    id: 6,
+    name: "Swiggy Clone",
+    description:
+      "A Swiggy clone built with React and Tailwind CSS, seamlessly integrating the Swiggy API to deliver a dynamic food delivery platform with real-time restaurant and menu data.",
+    image: projectImage1,
+    githubLink: "https://github.com/agrim08/React-JS",
   },
 ];
 
