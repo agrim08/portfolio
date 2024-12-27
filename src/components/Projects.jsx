@@ -9,7 +9,7 @@ const Projects = () => {
         {PROJECTS.map((project) => (
           <div
             key={project.id}
-            className="relative group overflow-hidden rounded-3xl "
+            className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
             <img
               src={project.image}

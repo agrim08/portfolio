@@ -8,6 +8,8 @@ import projectImage4 from "../assets/project4.jpeg";
 import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
 
+import Project1 from "../assets/image.png";
+
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
