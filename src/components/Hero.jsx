@@ -1,9 +1,15 @@
 import { HERO } from "../constants";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <section className="flex min-h-screen flex-wrap items-center pt-[65px]">
-      <div className="w-full md:w-1/2">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="w-full md:w-1/2"
+      >
         <h1 className="text-4xl font-bold md:text-5xl lg:text-[7rem] my-8 p-2 pl-8">
           {HERO.name}
         </h1>
@@ -11,10 +17,18 @@ const Hero = () => {
           {HERO.greet}
         </p>
         <p className="mb-8 p-2 text-xl pl-8">{HERO.description}</p>
-      </div>
-      <div className="w-full md:w-1/2 lg:p-8">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="w-full md:w-1/2 lg:p-8"
+      >
         <div className="flex justify-center">
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             src="https://binaryblogger.com/wp-content/uploads/2022/11/cyber-security-tips-for-developer.jpg"
             alt="hero_img"
             width={500}
@@ -22,7 +36,7 @@ const Hero = () => {
             className="rounded-xl"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

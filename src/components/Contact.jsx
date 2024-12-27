@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -73,7 +74,7 @@ const Contact = () => {
     <div className="p-4 lg:w-3/4" id="contact">
       <Toaster />
       <h2 className="mb-8 text-4xl font-semibold text-center tracking-tighter">
-        Let's Connect 😊
+        Let&apos;s Connect 😊
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4 flex space-x-4">

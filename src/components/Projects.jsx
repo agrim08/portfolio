@@ -1,24 +1,38 @@
 import { MdArrowOutward } from "react-icons/md";
 import { PROJECTS } from "../constants";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <section className="pt-20" id="projects">
-      <h2 className="text-2xl lg:text-4xl text-center mb-8 font-semibold">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-2xl lg:text-4xl text-center mb-8 font-semibold"
+      >
         Projects
-      </h2>
+      </motion.h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((project) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
             key={project.id}
             className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
-            <img
+            <motion.img
+              whileHover={{ scale: 1.1 }}
               src={project.image}
               alt={project.name}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
               className={`absolute inset-0 opacity-0 text-white flex flex-col items-center justify-center
                 backdrop-blur-lg transition-opacity duration-500 group-hover:opacity-100
             `}
@@ -36,8 +50,8 @@ const Projects = () => {
                   <MdArrowOutward />
                 </div>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </section>
