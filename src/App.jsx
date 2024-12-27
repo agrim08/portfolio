@@ -1,4 +1,5 @@
 import Bio from "./components/Bio";
+import Contact from "./components/Contact";
 import Education from "./components/Education";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -18,6 +19,7 @@ function App() {
           <Skills />
           <Work />
           <Education />
+          <Contact />
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
 
     const targetElement = document.querySelector(href);
     if (targetElement) {
-      const offset = -85;
+      const offset = -65;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offSetPosition = elementPosition + window.scrollY + offset;
 
@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* Desktop View */}
         <div className="mx-auto hidden max-w-2xl items-center justify-center rounded-lg bg-black/20 py-3 backdrop-blur-lg lg:flex">
           <div className="flex justify-between items-center gap-7">
-            <div>
+            {/* <div>
               <a href="">
                 <img
                   src={Logo}
@@ -43,7 +43,7 @@ const Navbar = () => {
                   className="rounded-full"
                 />
               </a>
-            </div>
+            </div> */}
             <div>
               <ul className="flex items-center gap-4">
                 {NAVIGATION_LINKS.map((item, index) => (
@@ -65,7 +65,7 @@ const Navbar = () => {
         {/* mobile view */}
         <div className="rounded-lg backdrop-blur-md lg:hidden">
           <div className="flex items-center justify-between">
-            <div>
+            {/* <div>
               <a href="#">
                 <img
                   src={Logo}
@@ -74,7 +74,7 @@ const Navbar = () => {
                   className="rounded-full m-2"
                 />
               </a>
-            </div>
+            </div> */}
             <div className="flex items-center">
               <button
                 className="focus:outline-none lg:hidden"
