@@ -1,9 +1,9 @@
-import { SOCIAL_MEDIA_LINKS } from "../constants";
-import { motion } from "framer-motion";
+import { SOCIAL_MEDIA_LINKS } from '../constants';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <div className="mt-20  p-5 w-full rounded-xl mx-2 md:flex md:justify-between md:items-center font-roboto">
+    <div className="mt-20  p-5 w-full rounded-xl mx-2 md:flex md:justify-between md:items-center">
       <div className="flex flex-col items-start justify-center space-y-2">
         <div className="text-4xl text-white hidden md:flex">AGRIM GUPTA</div>
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">

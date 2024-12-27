@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { NAVIGATION_LINKS } from "../constants";
-import { FaTimes } from "react-icons/fa";
-import { FaBars } from "react-icons/fa6";
+import { useState } from 'react';
+import { NAVIGATION_LINKS } from '../constants';
+import { FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa6';
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -21,7 +21,7 @@ const Navbar = () => {
 
       window.scrollTo({
         top: offSetPosition,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
     setIsMobileNavOpen(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed left-0 right-0 top-4 z-50 font-roboto">
+      <nav className="fixed left-0 right-0 top-4 z-50">
         {/* Desktop View */}
         <div className="mx-auto hidden max-w-2xl items-center justify-center rounded-lg bg-black/20 py-3 backdrop-blur-lg lg:flex">
           <div className="flex justify-between items-center gap-7">

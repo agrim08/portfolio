@@ -1,9 +1,9 @@
-import { EDUCATION } from "../constants";
-import { motion } from "framer-motion";
+import { EDUCATION } from '../constants';
+import { motion } from 'framer-motion';
 
 const Education = () => {
   return (
-    <section className="py-8 font-roboto" id="education">
+    <section className="py-8" id="education">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

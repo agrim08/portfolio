@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { BLOGS } from "../constants";
+import { motion } from 'framer-motion';
+import { BLOGS } from '../constants';
 
 const Blogs = () => {
   return (

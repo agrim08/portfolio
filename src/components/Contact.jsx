@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
-import emailjs from "@emailjs/browser";
-import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import Loader from "../utils/Loader";
-import { FiSend } from "react-icons/fi";
-import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import Loader from '../utils/Loader';
+import { FiSend } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [fromData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
   const [error, setError] = useState({});
   const [isSending, setIsSending] = useState(false);
@@ -27,15 +27,15 @@ const Contact = () => {
   const validateForm = () => {
     let errors = {};
     if (!fromData.name) {
-      errors.name = "Name is required";
+      errors.name = 'Name is required';
     }
     if (!fromData.email) {
-      errors.email = "Email is required";
+      errors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(fromData.email)) {
-      errors.email = "Invalid email address";
+      errors.email = 'Invalid email address';
     }
     if (!fromData.message) {
-      errors.message = "Message is required";
+      errors.message = 'Message is required';
     }
     return errors;
   };
@@ -52,18 +52,17 @@ const Contact = () => {
 
       emailjs
         .send(
-          "service_acb3h47",
-          "template_vjq9umm",
+          'service_acb3h47',
+          'template_vjq9umm',
           fromData,
-          "iJAUq6qj1phRJDyaM"
+          'iJAUq6qj1phRJDyaM',
         )
         .then((res) => {
-          toast.success("Message sent successfully");
-          setFormData({ name: "", email: "", message: "" });
+          toast.success('Message sent successfully');
+          setFormData({ name: '', email: '', message: '' });
         })
         .catch((err) => {
-          console.log("Error: " + err);
-          toast.error("Failed to send message");
+          toast.error('Failed to send message');
         })
         .finally(() => {
           setIsSending(false);
@@ -148,12 +147,12 @@ const Contact = () => {
         <button
           type="submit"
           className={`w-full rounded-lg border border-gray-300 bg-stone-200 px-6 py-3 text-sm font-semibold text-stone-800 hover:bg-stone-400 transition duration-300 ease-in-out ${
-            isSending ? "cursor-not-allowed opacity-50" : "cursor-pointer"
+            isSending ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
           }`}
           disabled={isSending}
         >
           <div className="flex items-center gap-2 justify-center">
-            {isSending ? <Loader /> : "Send Message"}
+            {isSending ? <Loader /> : 'Send Message'}
             {!isSending && <FiSend />}
           </div>
         </button>

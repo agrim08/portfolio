@@ -1,9 +1,9 @@
-import { EXPERIENCES } from "../constants";
-import { motion } from "framer-motion";
+import { EXPERIENCES } from '../constants';
+import { motion } from 'framer-motion';
 
 const Work = () => {
   return (
-    <section className="pt-20 font-roboto" id="work">
+    <section className="pt-20" id="work">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

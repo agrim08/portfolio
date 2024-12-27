@@ -1,10 +1,10 @@
-import { MdArrowOutward } from "react-icons/md";
-import { PROJECTS } from "../constants";
-import { motion } from "framer-motion";
+import { MdArrowOutward } from 'react-icons/md';
+import { PROJECTS } from '../constants';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-    <section className="pt-20 font-roboto" id="projects">
+    <section className="pt-8" id="projects">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             key={project.id}
-            className="relative overflow-hidden rounded-xl shadow-md border border-gray-200 cursor-pointer"
+            className="relative overflow-hidden rounded-xl shadow-md border border-gray-200 cursor-pointer p-8"
           >
             <motion.img
               whileHover={{ scale: 1.1 }}
@@ -33,7 +33,7 @@ const Projects = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/50 bg-opacity-60 p-6 opacity-100 backdrop-blur-lg"
+              className="absolute inset-0 flex flex-col items-center justify-between text-white bg-black/50 bg-opacity-60 p-6 opacity-100 backdrop-blur-lg"
             >
               <h3 className="text-xl lg:text-2xl font-bold mb-4">
                 {project.name}

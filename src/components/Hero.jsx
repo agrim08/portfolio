@@ -1,9 +1,9 @@
-import { HERO } from "../constants";
-import { motion } from "framer-motion";
+import { HERO } from '../constants';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="flex min-h-screen flex-wrap items-center pt-[65px] font-roboto">
+    <section className="flex min-h-screen flex-wrap items-center pt-[65px]">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

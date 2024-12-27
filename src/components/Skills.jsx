@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import { SKILLS } from "../constants";
+import { motion } from 'framer-motion';
+import { SKILLS } from '../constants';
 
 const Skills = () => {
   return (
-    <section className="container mx-auto font-roboto" id="skills">
+    <section className="container mx-auto" id="skills">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: index * 0.3 }}
             className={`h-[84px] flex items-center justify-between ${
-              index !== SKILLS.length - 1 ? "border-b border-stone-50/30" : ""
+              index !== SKILLS.length - 1 ? 'border-b border-stone-50/30' : ''
             }`}
           >
             <div className="flex items-center h-40 w-40 mr-2">
