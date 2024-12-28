@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col items-start justify-center space-y-2">
         <div className="text-4xl text-white hidden md:flex">AGRIM GUPTA</div>
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024
+          © 2024{' '}
           <a href="#" className="hover:underline">
             AgrimGupta™
           </a>

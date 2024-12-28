@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { BLOGS } from '../constants';
+import { MdArrowOutward } from 'react-icons/md';
 
 const Blogs = () => {
   return (
@@ -27,14 +28,17 @@ const Blogs = () => {
           <div className="md:w-2/3 w-full md:pl-8">
             <h2 className="text-2xl font-bold mb-4">{blog.title}</h2>
             <p className="text-lg mb-4">{blog.description}</p>
+            <div className='flex items-center gap-1 cursor-pointer '>
             <a
               href={blog.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-medium underline hover:no-underline"
+              className="text-lg font-medium underline hover:no-underline hover:scale-95"
             >
               Read More
             </a>
+            <MdArrowOutward className='h-5 w-5 hover:scale-95'/>
+            </div>
           </div>
         </motion.div>
       ))}
