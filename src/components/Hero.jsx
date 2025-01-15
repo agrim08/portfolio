@@ -1,5 +1,6 @@
 import { HERO } from '../constants';
 import { motion } from 'framer-motion';
+import { MdArrowOutward } from 'react-icons/md';
 
 const Hero = () => {
   return (
@@ -17,6 +18,17 @@ const Hero = () => {
           {HERO.greet}
         </p>
         <p className="mb-8 p-2 text-xl pl-8 text-justify">{HERO.description}</p>
+        <div className="flex items-center justify-between space-x-5 pl-8 p-2 w-20 h-12">
+          <a
+            href="http://bit.ly/3DMUlda"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black font-medium px-4 py-2 rounded-full flex items-center gap-2 transition hover:bg-gray-300"
+          >
+            <span>Resume</span>
+            <MdArrowOutward />
+          </a>
+        </div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
